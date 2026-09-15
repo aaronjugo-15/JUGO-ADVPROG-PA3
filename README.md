@@ -107,6 +107,7 @@ The output aligned with the required result:
 
 - Displayed only Model, mpg, hp, and wt in Pontiac Firebird
 <img width="256" height="57" alt="image" src="https://github.com/user-attachments/assets/e6c145a7-eaed-4ce0-83d2-99e0c637c685" />
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 ### C. MULTI-MODEL SUBSETTING
 Create a DataFrame named selected cars containing only the records for three models: Datsun 710,
