@@ -90,3 +90,51 @@ b. For Pontiac Firebird, display only Model, mpg, hp, and wt.
 Store the two results in toyota and pontiac, respectively. Do not use a hard-coded row number to
 locate either model.
 
+Code: 
+```
+toyota = cars[cars['Model'] == 'Toyota Corolla']
+toyota
+```
+```
+pontiac = cars.loc[cars['Model'] == 'Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']]
+pontiac
+```
+
+Output:
+The output aligned with the required result:
+- Displayed the complete row for the Toyota Corolla
+<img width="532" height="57" alt="image" src="https://github.com/user-attachments/assets/8e5a52fa-9013-4389-91a1-b4d93f169bfc" />
+
+- Displayed only Model, mpg, hp, and wt in Pontiac Firebird
+<img width="256" height="57" alt="image" src="https://github.com/user-attachments/assets/e6c145a7-eaed-4ce0-83d2-99e0c637c685" />
+---------------------------------------------------------------------------------------------------------------------------------------
+### C. MULTI-MODEL SUBSETTING
+Create a DataFrame named selected cars containing only the records for three models: Datsun 710,
+Lotus Europa, and Ferrari Dino.
+For these records, retain only Model, mpg, cyl, hp, and gear. Select the rows by their model values
+rather than by row numbers. Display selected cars and its shape.
+
+Code:
+```
+selected_cars = cars.loc[
+    cars['Model'].isin(['Datsun 710', 'Lotus Europa', 'Ferrari Dino']),
+    ['Model', 'mpg', 'cyl', 'hp', 'gear']
+]
+
+selected_cars
+```
+
+```
+print ("Selected Car Shape:\n", selected_cars.shape)
+```
+
+Output:
+The output aligned with the required result:
+- Displayed the three models in selected cars: Datsun 710, Lotus Europa, and Ferrari Dino.
+<img width="216" height="95" alt="image" src="https://github.com/user-attachments/assets/2b401402-70ac-4f08-aaa8-f0b4439ccd2c" />
+
+- Printed its shape
+```
+Selected Car Shape:
+ (3, 5)
+ ```
